@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from artsfest.views import indiv_registration
+from artsfest.views import group_registration
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', admin.site.urls),
+    path('indiv/',indiv_registration),
+    path('group/',group_registration),
+
 ]
